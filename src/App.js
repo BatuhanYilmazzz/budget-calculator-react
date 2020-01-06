@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useContext } from 'react';
+import ExpenseContextProvider from './context/ExpenseContext';
+import ExpenseForm from './components/ExpenseForm';
+import ExpenseList from './components/ExpenseList';
+import { ExpenseContext } from './context/ExpenseContext';
+import uuid from 'uuid';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ExpenseContextProvider>
+      <h1>Budget Calculator</h1>
+      <div className='App'>
+        <ExpenseForm />
+        <ExpenseList />
+      </div>
+      <h1>
+        Total Spending :<span className='total'></span>
+      </h1>
+    </ExpenseContextProvider>
   );
 }
 
