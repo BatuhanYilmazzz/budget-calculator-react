@@ -23,7 +23,7 @@ const ExpenseForm = () => {
             value={charge}
             type='text'
             className='form-control'
-            placeholder='e.g rent'
+            placeholder='Rent , Food etc.'
             onChange={e => setCharge(e.target.value)}
           />
         </div>
@@ -32,7 +32,7 @@ const ExpenseForm = () => {
           <input
             type='number'
             className='form-control'
-            placeholder='price'
+            placeholder='Price'
             onChange={e => setAmount(e.target.value)}
             value={amount}
           />

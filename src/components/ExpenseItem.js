@@ -8,6 +8,8 @@ const ExpenseItem = ({ expense }) => {
     <li className='item'>
       <div className='info'>
         <span className='expense'>{expense.charge}</span>
+      </div>
+      <div>
         <span className='amoount'>$ {expense.amount}</span>
       </div>
       <div>

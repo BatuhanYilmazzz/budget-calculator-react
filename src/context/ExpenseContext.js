@@ -4,12 +4,12 @@ import uuid from 'uuid';
 export const ExpenseContext = createContext();
 
 const ExpenseContextProvider = props => {
-  /*  const initialState = JSON.parse(localStorage.getItem('tasks'));*/
-  const [expenses, setExpenses] = useState([]);
+  const initialState = JSON.parse(localStorage.getItem('expenses'));
+  const [expenses, setExpenses] = useState(initialState ? initialState : []);
 
-  /*  useEffect(() => {
-    localStorage.setItem('tasks', JSON.stringify(tasks));
-  }, [tasks]);*/
+  useEffect(() => {
+    localStorage.setItem('expenses', JSON.stringify(expenses));
+  }, [expenses]);
 
   const addExpense = (charge, amount) => {
     setExpenses([...expenses, { id: uuid(), charge: charge, amount: amount }]);
