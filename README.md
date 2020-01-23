@@ -1,6 +1,4 @@
-# BudgetCalculator
-
-<h1 align="center">Weather App React</h1>
+<h1 align="center">Budget Calculator React</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/BatuhanYilmazzz/WeatherAppReact#readme" target="_blank">
