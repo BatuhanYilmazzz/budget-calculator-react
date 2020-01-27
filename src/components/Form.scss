@@ -1,0 +1,65 @@
+.form {
+  display: flex;
+  padding: 0 1rem;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+
+  &__group {
+    padding: 1rem 0.75rem;
+    flex: 0 0 50%;
+  }
+
+  label {
+    display: block;
+    font-size: 1rem;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+  }
+
+  &__control {
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    margin-right: 10px;
+    font-family: 'Dosis', sans-serif;
+    font-size: 15px;
+    color: #ccc;
+    background-color: #1d222b;
+    border: 1px solid #444;
+    outline: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .btn {
+    text-decoration: none;
+    color: #777;
+    background-color: #1d222b;
+    text-align: center;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    outline: 0;
+    border: 1px solid #000;
+    border-radius: 2px;
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 16px;
+    text-transform: uppercase;
+    margin: 0 auto;
+    cursor: pointer;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+  }
+
+  .btn-icon {
+    margin-left: 0.75rem;
+    font-size: 1.2rem;
+  }
+}

@@ -1,8 +1,9 @@
 import React, { useState, useContext } from 'react';
 import { ExpenseContext } from '../context/ExpenseContext';
 import { MdSend } from 'react-icons/md';
+import './Form.scss';
 
-const ExpenseForm = () => {
+const Form = () => {
   const { addExpense } = useContext(ExpenseContext);
   const [charge, setCharge] = useState(['']);
   const [amount, setAmount] = useState(['']);
@@ -16,25 +17,27 @@ const ExpenseForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className='form-center'>
-        <div className='form-group'>
-          <label>Charge</label>
+      <div className='form'>
+        <div className='form__group'>
+          <label>Expense</label>
           <input
             value={charge}
             type='text'
-            className='form-control'
+            className='form__control'
             placeholder='Rent , Food etc.'
             onChange={e => setCharge(e.target.value)}
+            required
           />
         </div>
-        <div className='form-group'>
+        <div className='form__group'>
           <label>Amount</label>
           <input
             type='number'
-            className='form-control'
+            className='form__control'
             placeholder='Price'
             onChange={e => setAmount(e.target.value)}
             value={amount}
+            required
           />
         </div>
       </div>
@@ -46,4 +49,4 @@ const ExpenseForm = () => {
   );
 };
 
-export default ExpenseForm;
+export default Form;

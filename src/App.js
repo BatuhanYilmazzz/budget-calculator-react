@@ -1,16 +1,16 @@
 import React from 'react';
 import ExpenseContextProvider from './context/ExpenseContext';
-import ExpenseForm from './components/ExpenseForm';
-import ExpenseList from './components/ExpenseList';
-import './App.css';
+import Form from './components/Form';
+import List from './components/List';
+import './App.scss';
 
 function App() {
   return (
     <ExpenseContextProvider>
-      <h1>Budget Calculator</h1>
+      <h1>Budget App</h1>
       <div className='App'>
-        <ExpenseForm />
-        <ExpenseList />
+        <Form />
+        <List />
       </div>
     </ExpenseContextProvider>
   );

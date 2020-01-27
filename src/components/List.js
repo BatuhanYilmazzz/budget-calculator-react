@@ -1,15 +1,16 @@
 import React, { useContext } from 'react';
-import ExpenseItem from './ExpenseItem';
+import Item from './Item';
 import { ExpenseContext } from '../context/ExpenseContext';
 import { MdDelete } from 'react-icons/md';
+import './List.scss';
 
-const ExpenseList = () => {
+const List = () => {
   const { expenses, clearList } = useContext(ExpenseContext);
   return (
     <div>
       <ul className='list'>
         {expenses.map((expense, index) => {
-          return <ExpenseItem key={index} expense={expense} />;
+          return <Item key={index} expense={expense} />;
         })}
       </ul>
       <button className='btn' onClick={clearList}>
@@ -19,4 +20,4 @@ const ExpenseList = () => {
   );
 };
 
-export default ExpenseList;
+export default List;

@@ -1,0 +1,44 @@
+.item {
+  background-color: #1d222b;
+  line-height: 1.5rem;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s linear;
+  max-width: 550px;
+  margin: 2rem auto;
+  outline: none;
+  color: #777;
+
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transform: scale(1.01);
+  }
+
+  &__expense {
+    text-transform: capitalize;
+  }
+
+  &__amount {
+    font-weight: 300;
+    font-size: 1rem;
+    border-radius: 2px;
+    padding: 1px 3px;
+  }
+
+  .clear-btn,
+  .edit-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    outline: none;
+    cursor: pointer;
+  }
+  .clear-btn {
+    color: #777;
+  }
+  .edit-btn {
+    color: #777;
+  }
+}

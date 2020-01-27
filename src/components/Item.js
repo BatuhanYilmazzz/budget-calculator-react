@@ -1,16 +1,17 @@
 import React, { useContext } from 'react';
 import { ExpenseContext } from '../context/ExpenseContext';
 import { MdEdit, MdDelete } from 'react-icons/md';
+import './Item.scss';
 
-const ExpenseItem = ({ expense }) => {
+const Item = ({ expense }) => {
   const { removeExpense } = useContext(ExpenseContext);
   return (
     <li className='item'>
-      <div className='info'>
-        <span className='expense'>{expense.charge}</span>
+      <div className='item__info'>
+        <span className='item__expense'>{expense.charge}</span>
       </div>
       <div>
-        <span className='amoount'>$ {expense.amount}</span>
+        <span className='item__amount'>$ {expense.amount}</span>
       </div>
       <div>
         <button className='edit-btn' arial-label='edit button'>
@@ -27,4 +28,4 @@ const ExpenseItem = ({ expense }) => {
   );
 };
 
-export default ExpenseItem;
+export default Item;
