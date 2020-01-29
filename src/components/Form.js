@@ -1,6 +1,5 @@
 import React, { useState, useContext } from 'react';
 import { ExpenseContext } from '../context/ExpenseContext';
-import { MdSend } from 'react-icons/md';
 import './Form.scss';
 
 const Form = () => {
@@ -42,8 +41,7 @@ const Form = () => {
         </div>
       </div>
       <button type='submit' className='btn'>
-        Submit
-        <MdSend className='btn-icon' />
+        Add Expense
       </button>
     </form>
   );

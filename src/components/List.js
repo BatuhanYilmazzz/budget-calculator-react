@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import Item from './Item';
 import { ExpenseContext } from '../context/ExpenseContext';
-import { MdDelete } from 'react-icons/md';
 import './List.scss';
 
 const List = () => {
@@ -14,7 +13,7 @@ const List = () => {
         })}
       </ul>
       <button className='btn' onClick={clearList}>
-        Clear <MdDelete className='btn-icon' />
+        Clear All
       </button>
     </div>
   );

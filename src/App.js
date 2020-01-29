@@ -7,7 +7,6 @@ import './App.scss';
 function App() {
   return (
     <ExpenseContextProvider>
-      <h1>Budget App</h1>
       <div className='App'>
         <Form />
         <List />
